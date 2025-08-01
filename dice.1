@@ -1,0 +1,32 @@
+.TH DICE 1
+.
+.SH NAME
+dice \- roll dice
+.
+.SH SYNOPSIS
+.B dice
+[SPECS]...
+.
+.SH DESCRIPTION
+.PP
+Return a newline-separated list of random numbers as specified by SPECS.
+.PP
+SPECS can be dice notation (e.g. 3d6 -- roll a 6-sided die 3 times)
+or interval notation (e.g. -5..5 -- one number between -5 and 5 inclusive).
+.
+.SH EXAMPLES
+.TP
+dice 3d6
+Produces three rolls of a six-sided die.
+.TP
+dice -5..5
+Produces one number between -5 and 5.
+.TP
+dice 2d4 1d20 5..10
+Produces two rolls of a four-sided die, one roll of a 20-sided die, and a single number between 5 and 10.
+.
+.SH AUTHOR
+Written by Gal Zeira <gal_zeira@protonmail.com>.
+.
+.SH "REPORTING BUGS"
+Mail directly to the author.
