@@ -1,6 +1,6 @@
 # Dice
 
-Roll the dice or select a random number from an interval.
+Roll dice, or select a random number from an interval.
 
 ## Installation
 

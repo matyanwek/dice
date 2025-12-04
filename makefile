@@ -1,12 +1,13 @@
-.PHONY: all
+dice: main.c
+	cc -o dice main.c
 
-all:
-	cc -o dice dice.c
-
-.PHONY: install
-
-install:
-	mkdir -p /usr/local/bin /usr/local/share/man/man1
-	cc -o dice dice.c
+install: dice
+	mkdir -p /usr/local/bin
 	cp dice /usr/local/bin
+	mkdir -p /usr/local/share/man/man1
 	cp dice.1 /usr/local/share/man/man1
+
+.PHONY: clean
+
+clean:
+	rm dice
